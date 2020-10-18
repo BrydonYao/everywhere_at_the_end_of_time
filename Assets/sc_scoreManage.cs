@@ -10,16 +10,18 @@ public class sc_scoreManage : MonoBehaviour
     public static sc_scoreManage instance;
     public TextMeshProUGUI text;
     int score;
-   
+
     void Start()
     {
-        if (instance == null){
+        if (instance == null)
+        {
             instance = this;
         }
-        
+
     }
 
-    public void ChangeScore(int coinValue){
+    public void ChangeScore(int coinValue)
+    {
         score += coinValue;
         text.text = "X" + score.ToString();
     }
